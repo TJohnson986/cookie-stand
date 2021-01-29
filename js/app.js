@@ -4,6 +4,8 @@ console.log('Hello, world');
 
 let hours = ['6am', '7am', '8am', '9am','10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 
+let seattleList = document.getElementById('seattle');
+
 let seattle = {
   name: 'Seattle',
   minimumCustomerEachHour: 23,
@@ -22,7 +24,8 @@ let seattle = {
       let hourlyTotal = Math.ceil(randomCustomerForOneHour * this.averageCookiesSoldPerCustomer);
       this.cookiesSoldPerHourArray.push(hourlyTotal);
       this.dailyStoreTotal += hourlyTotal;
-      console.log(randomCustomerForOneHour);
+      // console.log(randomCustomerForOneHour);
+      console.log(this.cookiesSoldPerHourArray);
     }
   },
   render: function() {
