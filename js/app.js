@@ -34,6 +34,25 @@ Store.prototype.calcCookiesSoldEachHour = function () {
   }
 };
 
+Store.prototype.render = function () {
+  this.calcCookiesSoldEachHour();
+  let tr = document.createElement('tr');
+
+  let th = document.createElement('th');
+  th.textContent = this.name;
+  tr.appendChild(th);
+
+  for (let i = 0; i < this.cookiesSoldPerHourArray.length; i++) {
+    let td = document.createElement('td');
+    td.textContent = this.cookiesSoldPerHourArray[i];
+    tr.appendChild(td);
+  }
+  let td = document.createElement('td');
+  td.textContent = this.dailyStoreTotal;
+  tr.appendChild(td);
+  tbody.appendChild(tr);
+};
+
 // let seattle = {
 //   name: 'Seattle',
 //   minimumCustomerEachHour: 23,
@@ -206,8 +225,8 @@ Store.prototype.calcCookiesSoldEachHour = function () {
 
 // site used - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
 
-seattle.render();
-tokyo.render();
-dubai.render();
-paris.render();
-lima.render();
+// seattle.render();
+// tokyo.render();
+// dubai.render();
+// paris.render();
+// lima.render();
