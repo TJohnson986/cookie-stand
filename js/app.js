@@ -26,8 +26,6 @@ function Store (name, minimumCustomerEachHour, maximumCustomerEachHour, averageC
   allStores.push(this);
 }
 
-console.log(allStores);
-
 Store.prototype.getRandomCustomerEachHour = function () {
   return Math.floor(Math.random() * (this.max - this.min + 1) + this.min);
 };
@@ -38,8 +36,6 @@ Store.prototype.calcCookiesSoldEachHour = function () {
     let hourlyTotal = Math.ceil(randomCustomerForOneHour * this.avg);
     this.cookiesSoldPerHourArray.push(hourlyTotal);
     this.dailyStoreTotal += hourlyTotal;
-    console.log(randomCustomerForOneHour);
-    console.log(hourlyTotal);
   }
 };
 
@@ -68,6 +64,7 @@ function renderHeader () {
     let th = document.createElement('th');
     th.textContent = hours[i];
     header.appendChild(th);
+    console.log(header);
   }
   let th = document.createElement('th');
   th.textContent = 'Store Daily Total';
