@@ -3,7 +3,7 @@
 let hours = ['6am', '7am', '8am', '9am','10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 
 let allStores = [];
-const cookieTable = document.querySelector('table');
+const cookieTable = document.getElementById('cookie-table');
 let tbody = document.createElement('tbody');
 cookieTable.appendChild(tbody);
 
@@ -42,6 +42,7 @@ Store.prototype.calcCookiesSoldEachHour = function () {
 Store.prototype.render = function () {
   this.calcCookiesSoldEachHour();
   let tr = document.createElement('tr');
+  cookieTable.appendChild(tr);
 
   let th = document.createElement('th');
   th.textContent = this.name;
@@ -59,12 +60,11 @@ Store.prototype.render = function () {
 };
 
 function renderHeader () {
-  let header = document.createElement('th');
+  let header = document.getElementById('first-row');
   for (let i = 0; i < hours.length; i++){
     let th = document.createElement('th');
     th.textContent = hours[i];
     header.appendChild(th);
-    console.log(header);
   }
   let th = document.createElement('th');
   th.textContent = 'Store Daily Total';
