@@ -18,3 +18,12 @@ th, td {
 th {
     font-weight: bold;
 }
+
+img.home {
+    position: relative;
+    width: 50%;
+}
+
+nav {
+  display: inline-block;
+}
