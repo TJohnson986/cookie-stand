@@ -55,3 +55,12 @@ a:link, a:visited {
 a:hover, a:active {
   background-color: firebrick;
 }
+
+#intro {
+  background-color: firebrick;
+
+}
+
+section h1 {
+  font-size: 2em;
+}
