@@ -19,9 +19,10 @@ th {
     font-weight: bold;
 }
 
-img.home {
-    position: relative;
-    width: 50%;
+#home {
+    margin-left: auto;
+    margin-right:auto;
+    display: block;
 }
 
 h1 {
@@ -56,11 +57,53 @@ a:hover, a:active {
   background-color: firebrick;
 }
 
-#intro {
-  background-color: firebrick;
+#intro, #merch {
+  background-color:rgba(178,34,34,0.5);
+  margin-top: 10px;
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  /* width: 50%; */
+}
 
+#intro img {
+  float: right;
+}
+
+.one li {
+  list-style: circle inside;
+  padding-left: 10px;
+  font-weight: bold;
+}
+
+#two {
+  list-style: square inside;
+  padding-left: 30px;
+  font-weight: normal;
 }
 
 section h1 {
   font-size: 2em;
+}
+
+#merch li {
+  margin-left: 10px;
+  padding: 10px;
+  display: inline-block;
+}
+
+div img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+footer {
+  padding-top: 150px;
+  text-align: center;
+}
+
+footer img {
+  padding-top: 10px;
+  width: 200px;
 }
