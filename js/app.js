@@ -10,6 +10,9 @@ cookieTable.appendChild(tbody);
 let allTotals = [];
 let grandTotal = 0;
 
+let myForm = document.getElementById('container');
+
+
 
 function Store (name, minimumCustomerEachHour, maximumCustomerEachHour, averageCookiesSoldPerCustomer){
   this.name = name;
