@@ -103,6 +103,18 @@ function calcAllTotals() {
   }
 }
 
+function handleSubmit(event){
+  event.preventDefault();
+  let name = event.target.name.value;
+  let min = +event.target.min.value;
+  let max = +event.target.max.value;
+  let avg = +event.target.avg.value;
+  let newForm = [name, min, max, avg];
+
+  let newStore = new Store(name, min, max, avg);
+  newStore.render();
+}
+
 let seattleStore = new Store('Seattle', 23, 65, 6.3, []);
 let tokyoStore = new Store('Tokyo', 3, 24, 1.2, []);
 let dubaiStore = new Store('Dubai', 11, 38, 3.7, []);
@@ -116,3 +128,5 @@ dubaiStore.render();
 parisStore.render();
 limaStore.render();
 renderFooter();
+
+myForm.addEventListener('submit', handleSubmit);
