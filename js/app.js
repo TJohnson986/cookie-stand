@@ -115,18 +115,20 @@ function handleSubmit(event){
   newStore.render();
 }
 
-let seattleStore = new Store('Seattle', 23, 65, 6.3, []);
-let tokyoStore = new Store('Tokyo', 3, 24, 1.2, []);
-let dubaiStore = new Store('Dubai', 11, 38, 3.7, []);
-let parisStore = new Store('Paris', 20, 38, 2.3, []);
-let limaStore = new Store('Lima', 2, 16, 4.6, []);
+function renderAll() {
+  for (let i = 0; i < allStores.length; i++){
+    allStores[i].render();
+  }
+}
+
+new Store('Seattle', 23, 65, 6.3, []);
+new Store('Tokyo', 3, 24, 1.2, []);
+new Store('Dubai', 11, 38, 3.7, []);
+new Store('Paris', 20, 38, 2.3, []);
+new Store('Lima', 2, 16, 4.6, []);
 
 renderHeader();
-seattleStore.render();
-tokyoStore.render();
-dubaiStore.render();
-parisStore.render();
-limaStore.render();
+renderAll();
 renderFooter();
 
 myForm.addEventListener('submit', handleSubmit);
