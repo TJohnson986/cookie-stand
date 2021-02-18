@@ -31,16 +31,16 @@
          <legend>Sales form</legend> 
 
          <label>Store Name
-           <input type = "text" name="name">
+           <input type = "text" name="name" required>
          </label>
          <label> Minimum Per Hour
-           <input type = "text" name="min">
+           <input type = "number" name="min" required>
          </label>
          <label> Maximum Per Hour
-          <input type = "text" name="max">
+          <input type = "number" name="max" required>
         </label>
         <label> Average Per Customer
-          <input type = "text" name="avg">
+          <input type = "number" step = '0.1' name="avg" required>
         </label>
         <button type="submit">Submit</button>
         </fieldset>
