@@ -1,59 +1,63 @@
 <!DOCTYPE html>
 
 <html>
-  <head>
-    <title>Salmon Cookies</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-  </head>
 
-  <body>
-    <header>
-      <div>
-      <img class = "home";>
+<head>
+  <title>Salmon Cookies</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <div>
+      <img class="home" ;>
       <img src="img/salmon.png">
+    </div>
+    <h1>Salmon Cookies Sales</h1>
+    <nav>
+      <div>
+        <a href="index.html"> Home</a>
       </div>
-      <h1>Salmon Cookies Sales</h1>
-      <nav>
-        <div>
-          <a href="index.html"> Home</a>
-        </div>
-        <div>
-          <a href="sales.html"> Sales (secret page)</a>
-        </div>
-        <div>
-          <a href="store.html"> Store</a>
-        </div>
-      </nav>
-      </header>
-      <form id='container'>
-        <fieldset>
-         <legend>Sales form</legend> 
+      <div>
+        <a href="sales.html"> Sales (secret page)</a>
+      </div>
+      <div>
+        <a href="store.html"> Store</a>
+      </div>
+    </nav>
+  </header>
+  <form id='container'>
+    <fieldset>
+      <legend>Sales form</legend>
 
-         <label>Store Name
-           <input type = "text" name="name" required>
-         </label>
-         <label> Minimum Per Hour
-           <input type = "number" name="min" required>
-         </label>
-         <label> Maximum Per Hour
-          <input type = "number" name="max" required>
-        </label>
-        <label> Average Per Customer
-          <input type = "number" step = '0.1' name="avg" required>
-        </label>
-        <button type="submit">Submit</button>
-        </fieldset>
-      </form>
+      <label>Store Name
+        <input type="text" name="name" required>
+      </label>
+      <label> Minimum Per Hour
+        <input type="number" name="min" required>
+      </label>
+      <label> Maximum Per Hour
+        <input type="number" name="max" required>
+      </label>
+      <label> Average Per Customer
+        <input type="number" step='0.1' name="avg" required>
+      </label>
+      <button type="submit">Submit</button>
+    </fieldset>
+  </form>
 
-    <table id='cookie-table'>
-      <thead>
-        <tr id = 'first-row'>
-          <th></th>
-          </tr> 
-      </thead>
-    </table>
+  <table id='cookie-table'>
+    <thead>
+      <tr id='first-row'>
+        <th></th>
+      </tr>
+    </thead>
+  </table>
 
-    <script src="js/app.js"></script>
-  </body>
+  <script src="js/app.js"></script>
+</body>
+
 </html>
