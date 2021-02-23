@@ -108,7 +108,6 @@ function handleSubmit(event){
   let min = +event.target.min.value;
   let max = +event.target.max.value;
   let avg = +event.target.avg.value;
-  // let newForm = [name, min, max, avg];
 
   let newStore = new Store(name, min, max, avg);
   newStore.render();
