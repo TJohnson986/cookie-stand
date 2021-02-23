@@ -6,7 +6,7 @@ let allStores = [];
 let cookieTable = document.getElementById('cookie-table');
 let tbody = document.createElement('tbody');
 cookieTable.appendChild(tbody);
-
+let tfoot = document.createElement('tfoot');
 let allTotals = [];
 let grandTotal = 0;
 
@@ -71,7 +71,6 @@ function renderHeader () {
 
 function renderFooter () {
   calcAllTotals();
-  let tfoot = document.createElement('tfoot');
   let tr = document.createElement('tr');
   let td = document.createElement('td');
   td.textContent = 'Totals';
@@ -109,10 +108,12 @@ function handleSubmit(event){
   let min = +event.target.min.value;
   let max = +event.target.max.value;
   let avg = +event.target.avg.value;
-  let newForm = [name, min, max, avg];
+  // let newForm = [name, min, max, avg];
 
   let newStore = new Store(name, min, max, avg);
   newStore.render();
+  tfoot.removeChild(tfoot.firstChild);
+  renderFooter();
 }
 
 function renderAll() {
