@@ -29,7 +29,7 @@ h1 {
   text-align: center;
   margin: 10px;
   font-size: 4em;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Newsreader', serif;
 }
 
 nav {
@@ -41,7 +41,7 @@ nav div {
   margin: 10px;
   width: auto;
   border: 3px solid black;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
 
 a:link, a:visited {
@@ -84,6 +84,7 @@ a:hover, a:active {
 
 section h1 {
   font-size: 2em;
+  font-family: 'Newsreader', serif;
 }
 
 #merch li {

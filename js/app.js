@@ -6,7 +6,7 @@ let allStores = [];
 let cookieTable = document.getElementById('cookie-table');
 let tbody = document.createElement('tbody');
 cookieTable.appendChild(tbody);
-
+let tfoot = document.createElement('tfoot');
 let allTotals = [];
 let grandTotal = 0;
 
@@ -71,7 +71,6 @@ function renderHeader () {
 
 function renderFooter () {
   calcAllTotals();
-  let tfoot = document.createElement('tfoot');
   let tr = document.createElement('tr');
   let td = document.createElement('td');
   td.textContent = 'Totals';
@@ -109,24 +108,27 @@ function handleSubmit(event){
   let min = +event.target.min.value;
   let max = +event.target.max.value;
   let avg = +event.target.avg.value;
-  let newForm = [name, min, max, avg];
 
   let newStore = new Store(name, min, max, avg);
   newStore.render();
+  tfoot.removeChild(tfoot.firstChild);
+  renderFooter();
 }
 
-let seattleStore = new Store('Seattle', 23, 65, 6.3, []);
-let tokyoStore = new Store('Tokyo', 3, 24, 1.2, []);
-let dubaiStore = new Store('Dubai', 11, 38, 3.7, []);
-let parisStore = new Store('Paris', 20, 38, 2.3, []);
-let limaStore = new Store('Lima', 2, 16, 4.6, []);
+function renderAll() {
+  for (let i = 0; i < allStores.length; i++){
+    allStores[i].render();
+  }
+}
+
+new Store('Seattle', 23, 65, 6.3, []);
+new Store('Tokyo', 3, 24, 1.2, []);
+new Store('Dubai', 11, 38, 3.7, []);
+new Store('Paris', 20, 38, 2.3, []);
+new Store('Lima', 2, 16, 4.6, []);
 
 renderHeader();
-seattleStore.render();
-tokyoStore.render();
-dubaiStore.render();
-parisStore.render();
-limaStore.render();
+renderAll();
 renderFooter();
 
 myForm.addEventListener('submit', handleSubmit);
